@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+	  <LangVersion>latest</LangVersion>
+	  <DressmakerGameRoot>Your Dressmaker Game Path Here</DressmakerGameRoot>
+	  <DataDir>$(DressmakerGameRoot)\Dressmaker_Data</DataDir>
+	  <OutputPath>File path to the plugin folder for builds</OutputPath>
+	  <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="BepInEx">
+			<HintPath>$(DressmakerGameRoot)\BepInEx\core\BepInEx.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(DressmakerGameRoot)\BepInEx\core\0Harmony.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Unity.UI">
+			<HintPath>$(DressmakerGameRoot)\Dressmaker_Data\Managed\UnityEngine.UI.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(DressmakerGameRoot)\Dressmaker_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(DressmakerGameRoot)\Dressmaker_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(DressmakerGameRoot)\Dressmaker_Data\Managed\UnityEngine.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>$(DressmakerGameRoot)\Dressmaker_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+			<Private>false</Private>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="DressmakerMods">
+			<HintPath>$(DressmakerGameRoot)\BepInEx\plugins\DressmakerMods.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="AssemblyCSharp">
+			<HintPath>$(DataDir)\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Framework">
+			<HintPath>$(DataDir)\Managed\Framework.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+	</ItemGroup>
+
+</Project>
